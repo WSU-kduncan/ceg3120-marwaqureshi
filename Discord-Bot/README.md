@@ -4,10 +4,10 @@ Setup:
 When you go to discord's developer portal, then navigate to the applications and select your class application that you are currently in. Select Bot under the settings menu on the left, and under 'Build-A-Bot' you can see the 'TOKEN'. Clickit and reveal the API token.
 
 - Where to put it to work with the code
-The API token helps your Bot connect to Discord using the token. An easy way to do it is through creating .env file and performing the code " DISCORD_TOKEN={your-bot-token} " in it to make sure the token is stored in a safe place.
+The API token helps your Bot connect to Discord using the token. An easy way to do it is through creating .env file and performing the code " DISCORD_TOKEN={your-bot-token} "  and adding your token in it without brackets, to make sure the token is stored in a safe place.
 
 - Dependencies (what packages need to be installed to run the code)
-We need to remind ourselves that we are using python version 3 to begin with. Also, a python library calle discord.py will be used, including Async.IO. The package that we need is pip. We also need a library called dotenv which loads the environment variables from a env file into shell environment variable.  
+We need to remind ourselves that we are using python version 3 to begin with. Also, a python library calle discord.py will be used, including Async.IO. The package that we need is pip. We also need a library called dotenv which loads the environment variables from a env file into shell environment variable. This is the dependency we need.   
 
 Usage:
 
@@ -15,7 +15,7 @@ Usage:
 When using the Discord server, one can write the message to be towel! and the random picks of hitchhiker quotes will generate a quote.
 
 - What response this will provide (from your bot)
-The response that the bot will provide will be a quote from the hitchhikers quotes at a random. 
+The response that the bot will provide will be a quote from the hitchhikers quotes at a random each time you type towel!
 
 Research:
 
