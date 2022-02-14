@@ -1,7 +1,7 @@
 Part 1:
 
 1. Create VPC
-![CreateVPC](\\wsl.localhost\Ubuntu\home\marwaq\ceg3120-marwaqureshi\Project2\VPC-images) 
+![CreateVPC](Project2\VPC-images) 
 ![CreateVPC-screenshot](C:\Users\marwa\Desktop\ceg3120\CreateVPC-screenshot.jpg)
 ![createdvpc](C:\Users\marwa\Desktop\ceg3120\createdvpc.jpg)
 ![createvpcproof](C:\Users\marwa\Desktop\ceg3120\createvpcproof.jpg)
