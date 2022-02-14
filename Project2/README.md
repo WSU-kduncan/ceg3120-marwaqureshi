@@ -1,7 +1,6 @@
 Part 1:
 
 1. Create VPC
- 
 VPC stands for Virtual Private Cloud. It is the virtual network for AWS account, aka netwroking layer for Amazon EC2. A user can have multiple VPC's on one account. It serves as a secure, isolated, private cloud hosted within in a public cloud. You can run code, store data, and host websites. However, private cloud is hosted remotely by a public cloud provider.
 
 2. Create Subnet
