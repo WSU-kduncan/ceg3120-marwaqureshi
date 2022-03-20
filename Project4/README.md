@@ -14,15 +14,21 @@ Example of ip address and hostname shown which was used in the yml file.
 3) 
 
 ~ Modified file: /etc/haproxy/haproxy.cfg
+
 ~ configured frontend and backend  
+
 ~ sudo systemctl restart haproxy
+
 ~ https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/
 
 4)
 
 ~ index.html from /var/www/html done for both webservers.
+
 ~ default, none
+
 ~ /var/www/html. default for site content
+
 ~ sudo systemctl restart apache2
 
 5)
