@@ -28,7 +28,9 @@ Example of ip address and hostname shown which was used in the yml file.
 5)
 
 [screenshots]
+
 <img width="508" alt="Screen Shot 2022-03-19 at 8 50 07 PM" src="https://user-images.githubusercontent.com/89467017/159143610-3d50fc85-31b3-445f-8e28-6272e38275fc.png">
+
 <img width="508" alt="Screen Shot 2022-03-19 at 8 50 38 PM" src="https://user-images.githubusercontent.com/89467017/159143611-224e4643-50a5-4807-bd38-06a25b875b71.png">
 
 
