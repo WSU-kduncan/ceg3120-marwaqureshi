@@ -3,8 +3,11 @@ Part 2
 1)
 
 ~ vim etc/hosts, then type information such as hostname, ip address, user, filename. 
-Example of ip address and hostname shown which was used in the yml file.
+
+Example of ip address and hostname shown which was used in the yml file:
+
 10.0.1.10 WebServer1
+
 10.0.1.11 WebServer2
 
 2)
