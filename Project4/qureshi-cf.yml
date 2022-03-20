@@ -140,8 +140,16 @@ Resources:
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: 0.0.0.0 # Replace with home / trusted public IP
+          CidrIp: 74.215.38.206 # Replace with home / trusted public IP
           # TODO Need more rules for port 80 access
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: 0.0.0.0/0 
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: 10.0.0.0/24
       Tags: 
         - Key: Name
           Value: P4-sg
@@ -176,9 +184,11 @@ Resources:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \ 
+            apt install 
               haproxy \
+              git && \
             # TODO need to install haproxy
-            apt-get install -y git python3 python3-pip && \
+            apt-get install -y git python3 python3-pip haproxy && \
             hostnamectl set-hostname proxy && \
             reboot
   WebServ1Instance:
@@ -212,13 +222,11 @@ Resources:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \ 
-              haproxy \
-              apache2 \ 
-              git && \
+            apt-get install -y git apache2 && \
             # TODO need to install apache or nginx
             apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
-            hostnamectl set-hostname WebServer1Instance --static  && \
+            hostnamectl set-hostname WebServer1 && \
             reboot
 # TODO: create another webserver instance attached to the private subnet
   WebServ2Instance:
@@ -238,7 +246,7 @@ Resources:
         - Key: Application
           Value: !Ref 'AWS::StackId'
         - Key: Name
-          Value: webserv1
+          Value: webserv2
       NetworkInterfaces:
         - GroupSet:
             - !Ref SecurityGroup
@@ -246,17 +254,15 @@ Resources:
           DeviceIndex: '0'
           DeleteOnTermination: 'true'
           SubnetId: !Ref PrivateSubnet
-          PrivateIpAddress: 10.0.1.10 # TODO make sure unique to the instance
+          PrivateIpAddress: 10.0.1.11 # TODO make sure unique to the instance
       UserData:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \ 
-              haproxy \
-              apache2 \ 
-              git && \
             # TODO need to install apache or nginx
+            apt-get install -y git apache2 && \
             apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
-            hostnamectl set-hostname WebServer2Instance --static  && \
+            hostnamectl set-hostname WebServer2 && \
             reboot
